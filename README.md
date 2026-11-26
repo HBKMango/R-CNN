@@ -54,6 +54,22 @@ docker run --rm --network none -v "$(pwd)/modelo:/modelo:ro" faster-rcnn-4-2 --c
 
 ## Resultados de la prueba en Docker
 
+Ejecuté el contenedor sin conexión de red en Docker Desktop para macOS (Docker Engine 29.9.3), con CPU ARM64 y dos hilos de PyTorch. Usé Faster R-CNN con pesos COCO y un umbral de confianza del 70 %. Después de una pasada de calentamiento, medí tres repeticiones del mismo lote de dos imágenes.
+
+| Medición | Resultado |
+| --- | ---: |
+| Carga del modelo | 0.467 s |
+| Tiempos de las tres repeticiones | 6.299 s, 6.071 s y 6.055 s |
+| Tiempo medio por lote | 6.142 s |
+| Mediana por lote | 6.071 s |
+| Rendimiento global | 0.33 imágenes/s |
+
+El modelo detectó una persona y una corbata en `grace_hopper.jpg` y un perro en `perro.jpg`. En esta prueba, procesar el lote de dos imágenes tardó más que cargar el modelo. Los tiempos corresponden al equipo y a las imágenes de esta prueba.
+
+[Evidencia de mi ejecución en macOS](evidencia/mi_ejecucion.txt)
+
+### Prueba de referencia en Codex Cloud
+
 La ejecución de referencia se hizo en Codex Cloud, con Docker Engine 29.9.2, CPU x86_64 y dos hilos de PyTorch. El contenedor se ejecutó con la red deshabilitada. El [registro de terminal](evidencia/ejecucion_docker.txt) muestra estos resultados.
 
 | Medición | Resultado |
