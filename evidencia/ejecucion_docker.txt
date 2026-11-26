@@ -1,0 +1,18 @@
+Entorno de prueba en Codex Cloud
+Docker Engine 29.9.2
+$ docker run --rm --network none faster-rcnn-4-2
+Modelo: Faster R-CNN ResNet50 FPN · pesos: COCO
+Arquitectura: x86_64 · dispositivo: cpu · hilos: 2
+Carga del modelo: 1.563 s
+Imágenes por repetición: 2 · umbral: 70%
+Calentamiento completado.
+Repetición 1: 8.513 s · 0.23 imágenes/s
+Repetición 2: 8.344 s · 0.24 imágenes/s
+Repetición 3: 9.146 s · 0.22 imágenes/s
+grace_hopper.jpg: 2 detecciones
+  person · 99.93% · caja [8.9, 39.9, 507.6, 589.8]
+  tie · 95.51% · caja [227.8, 421.5, 288.2, 533.5]
+perro.jpg: 1 detecciones
+  dog · 97.08% · caja [140.2, 66.7, 1384.6, 1166.5]
+Tiempo medio: 8.668 s · mediana: 8.513 s
+Rendimiento global: 0.23 imágenes/s

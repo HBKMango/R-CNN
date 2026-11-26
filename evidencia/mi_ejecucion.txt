@@ -1,0 +1,15 @@
+Modelo: Faster R-CNN ResNet50 FPN · pesos: COCO
+Arquitectura: aarch64 · dispositivo: cpu · hilos: 2
+Carga del modelo: 0.467 s
+Imágenes por repetición: 2 · umbral: 70%
+Calentamiento completado.
+Repetición 1: 6.299 s · 0.32 imágenes/s
+Repetición 2: 6.071 s · 0.33 imágenes/s
+Repetición 3: 6.055 s · 0.33 imágenes/s
+grace_hopper.jpg: 2 detecciones
+  person · 99.93% · caja [8.9, 39.9, 507.6, 589.8]
+  tie · 95.51% · caja [227.8, 421.5, 288.2, 533.5]
+perro.jpg: 1 detecciones
+  dog · 97.08% · caja [140.2, 66.7, 1384.6, 1166.5]
+Tiempo medio: 6.142 s · mediana: 6.071 s
+Rendimiento global: 0.33 imágenes/s
